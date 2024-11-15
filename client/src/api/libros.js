@@ -14,3 +14,9 @@ export const editarLibro = async (nombreLibro, datosActualizados) =>
 // Nueva función para eliminar un libro enviando el ID correcto
 export const eliminarLibro = async (id) =>
   axios.delete(`/eliminarLibro/${id}`);
+
+export const getVistaPreviaLibros = async () =>
+  axios.get(`/vistaPreviaLibros/`);
+
+export const getVistaPreviaLibro = async (nombreLibro) =>
+  axios.get(`/vistaPreviaLibro/${nombreLibro}`);

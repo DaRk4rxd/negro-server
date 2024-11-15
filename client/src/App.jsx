@@ -9,6 +9,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { Inicio } from "./pages/Inicio";
 import { Estudiantes } from "./pages/Estudiantes";
 import { Libros } from "./pages/Libros";
+import { VistaPreviaLibros } from "./pages/vistaPrevia";
 import { EstudiantesProvider } from "./context/estudianteContext";
 import { LibrosProvider } from "./context/librosContext";
 import { PrestamosProvider } from "./context/prestamosContext";
@@ -26,6 +27,7 @@ function App() {
               <Route path="/" element={<LoginPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/vistaPrevia" element={<VistaPreviaLibros />} />
               <Route element={<ProtectedRoute />}>
                 <Route path="/Inicio" element={<Inicio />} />
                 <Route path="/mostrarEstudiantes" element={<Estudiantes />} />

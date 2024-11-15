@@ -5,6 +5,8 @@ import {
   getLibrosRequest,
   editarLibro, // Importa la nueva función
   eliminarLibro, // Importa la nueva función
+  getVistaPreviaLibros,
+  getVistaPreviaLibro,
 } from "../api/libros";
 
 const LibrosContext = createContext();
@@ -67,6 +69,29 @@ export const LibrosProvider = ({ children }) => {
     }
   };
 
+  const vistaPreviaLibros = async () => {
+    try {
+      const res = await getVistaPreviaLibros();
+      setLibros(res.data); // Asegúrate de que `res.data` sea un array
+      return res.data; // Retorna `res.data` para que esté disponible en `VistaPreviaLibros`
+    } catch (error) {
+      console.error("Error al obtener libros:", error);
+      return []; // Retorna un array vacío en caso de error para evitar `undefined`
+    }
+  };
+  
+
+  const vistaPreviaLibro = async (nombreLibro) => {
+    try {
+      const res = await getVistaPreviaLibro(nombreLibro);
+      console.log(res);
+      
+      return res.data;
+    } catch (error) {
+      console.error("Error al obtener libro:", error);
+    }
+  };
+
   return (
     <LibrosContext.Provider
       value={{
@@ -76,6 +101,8 @@ export const LibrosProvider = ({ children }) => {
         getLibros,
         actualizarLibro,
         borrarLibro,
+        vistaPreviaLibros,
+        vistaPreviaLibro,
       }}
     >
       {children}

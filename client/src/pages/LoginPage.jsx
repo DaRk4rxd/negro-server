@@ -41,7 +41,6 @@ export function LoginPage() {
             label="Cual es tu usuario?"
             name="username"
             placeholder="Nombre de usuario"
-
             {...register("username", { required: true })}
           />
           <p>{errors.username?.message}</p>
@@ -51,13 +50,17 @@ export function LoginPage() {
             type="password"
             name="password"
             placeholder="Escribe tu contraseña"
-
             {...register("password", { required: true, minLength: 6 })}
           />
           <p>{errors.password?.message}</p>
 
           <Button>Ingresar</Button>
-        </form>
+        </form><br />
+        <button>
+          <Link className="btn" to="/vistaPrevia">
+            Ver vista previa de los libros
+          </Link>
+        </button>
       </Card>
     </div>
   );

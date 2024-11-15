@@ -1,0 +1,19 @@
+.btn {
+  color: #0284c7; /* Color de texto */
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.btn:hover {
+  color: #ffffff; /* Cambia a blanco en hover */
+  background-color: #0284c7; /* Fondo más oscuro */
+  box-shadow: 0px 4px 8px rgba(2, 132, 199, 0.3); /* Sombra */
+}
+
+.btn:active {
+  transform: scale(0.98); /* Efecto de clic */
+}

@@ -164,8 +164,9 @@ export function ModalDetallesEstudiante({
 }) {
   if (!isOpen || !estudiante) return null;
 
-  const { devolverLibro, editarEstudiante, eliminarEstudiante } =
+  const { editarEstudiante, eliminarEstudiante } =
     useEstudiantes();
+    const { devolverLibro } = usePrestamos(); // Cambia a `usePrestamos`
   const [showPrestamos, setShowPrestamos] = useState(false);
   const [showFullDetails, setShowFullDetails] = useState(false);
   const [isEditing, setIsEditing] = useState(false);

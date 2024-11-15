@@ -18,6 +18,7 @@ app.use(
     origin: FRONTEND_URL,
   })
 );
+
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());

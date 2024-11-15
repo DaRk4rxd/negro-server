@@ -20,4 +20,8 @@ router.put("/editarLibro/:id", auth, editarLibro); // Ruta para editar un libro
 
 router.delete("/eliminarLibro/:id", auth, eliminarLibro); // Ruta para eliminar un libro
 
+router.get("/vistaPreviaLibros", getLibros);
+
+router.get("/vistaPreviaLibro", getLibro);
+
 export default router;

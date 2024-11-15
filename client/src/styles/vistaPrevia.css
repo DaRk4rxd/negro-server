@@ -1,0 +1,89 @@
+.vista-previsualizacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.vista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-buscador {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-buscador:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+}
+
+.contador-libros {
+  color: #555;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.no-libros {
+  text-align: center;
+  color: #999;
+  font-size: 1.2em;
+  padding: 40px;
+}
+
+.libros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.libro-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.libro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.libro-cover {
+  background: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  font-size: 2em;
+}
+
+.libro-icon {
+  font-size: 3em;
+}
+
+.libro-content {
+  padding: 15px;
+}
+
+.libro-content h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.libro-content p {
+  margin: 5px 0;
+  color: #666;
+}

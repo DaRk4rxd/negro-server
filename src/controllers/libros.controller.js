@@ -10,23 +10,29 @@ export const guardarLibro = async (req, res) => {
   }
 };
 
-// Ruta para buscar libros por título
 export const getLibro = async (req, res) => {
   try {
-    const { titulo } = req.query; // Obtener el título que el usuario está escribiendo
+    
+    const { titulo } = req.query;
     const libros = await Libro.find({
       titulo: { $regex: `^${titulo}`, $options: "i" },
-    }); // Buscar libros que comiencen con lo que el usuario escribe
+    });
 
-    res.json(libros); // Enviar los libros completos encontrados al cliente
+    if (libros.length === 0) {
+      return res.status(403).json({ message: "No se encontraron libros" });
+    }
+
+    res.json(libros);
   } catch (error) {
     res.status(500).json({ message: "Error en la búsqueda de libros" });
   }
 };
 
+
 export const getLibros = async (req, res) => {
   try {
     const libros = await Libro.find(); // Trae todos los libros de la base de datos
+    console.log("libros obtenidos");
     res.json(libros); // Envía los libros como respuesta en formato JSON
   } catch (error) {
     res.status(500).json({ error: "Error al obtener los libros" });
