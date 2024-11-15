@@ -1,0 +1,159 @@
+.divHome {
+  display: flex;
+}
+
+.divPadre2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  height: 93vh;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  max-width: 1200px;
+  padding: 5.4vh 0;
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #cbe3de;
+  border-top: 1px solid #cbd3e1;
+  border-bottom: 1px solid #cbd3e1;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: black;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: black;
+}
+
+.stats {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+.stat {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 15px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.stat h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat:hover {
+  transform: scale(1.05);
+}
+
+.featured-books {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1vh 20px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #cbe3de;
+  border-top: 1px solid #cbd3e1;
+  border-bottom: 1px solid #cbd3e1;
+}
+
+.featured-books h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.book-card {
+  width: 220px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.quick-access {
+  width: 100%;
+  max-width: 1200px;
+  padding: 4vh 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.quick-access h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.quick-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.quick-link {
+  padding: 12px 25px;
+  background-color: #243642;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quick-link:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind utilities;
+
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+body {
+  background: #202020;
+  background-color: #E2F1E7;
+  color: white;
+  margin: 0px;
+}
+
+.content-container {
+  height: calc(100vh - theme("spacing.20"));
+}

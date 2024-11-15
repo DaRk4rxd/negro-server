@@ -1,0 +1,13 @@
+.sidebar {
+  height: 93vh;
+}
+
+.sidebar-menu {
+  background-color: #387478;
+  height: 93vh;
+}
+
+.sidebar .menuItem:hover {
+  background-color: #387478;
+}
+

@@ -1,0 +1,160 @@
+/* Contenedor principal de la lista de estudiantes */
+.divEstudiantes-secundario {
+  padding: 20px;
+  margin-top: 20px;
+  /* background-color: #f4f5f7; */
+  border-radius: 10px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s;
+  /* height: 100%; */
+  width: 100%;
+}
+
+/* Encabezado con botón de registro y buscador */
+.estudiantes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #629584;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra ligera */
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.estudiantes-header:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* Sombra más intensa al hacer hover */
+}
+
+/* Espaciado adicional entre botón y buscador en dispositivos pequeños */
+@media (max-width: 600px) {
+  .estudiantes-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+}
+
+
+/* Botón de registrar estudiante */
+.btnRegistrarEstudiantes {
+  background-color: #243642;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnRegistrarEstudiantes:hover {
+  background-color: rgb(2, 81, 161);
+  transform: scale(1.05);
+}
+
+/* Estilo del buscador */
+.input-buscador {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-buscador:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 4px 8px rgba(0, 122, 255, 0.2);
+}
+
+/* Mensaje cuando no hay estudiantes */
+.no-estudiantes {
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* Contenedor de las tarjetas de estudiantes */
+.grid-estudiantes {
+  background-color: #cbe3de;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  /* height: 100%; */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-top: 20px;
+}
+
+/* Tarjeta de estudiante */
+.estudiante-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.estudiante-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de borde animado en hover */
+.estudiante-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #243642;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.estudiante-card:hover::after {
+  transform: scaleY(1);
+}
+
+/* Estilo del nombre del estudiante */
+.estudiante-card h2 {
+  font-size: 1.3em;
+  color: #243642;
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+/* Estilo de los detalles del estudiante */
+.estudiante-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Ajuste de estilos para dispositivos móviles */
+@media (max-width: 600px) {
+  .input-buscador {
+    max-width: 100%;
+  }
+}
+
+.btnEliminar {
+  background-color: #ee0d0d !important;
+}
+
+.espacio {
+  margin-right: 20px !important;
+}

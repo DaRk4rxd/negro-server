@@ -1,0 +1,137 @@
+/* Contenedor principal de la lista de libros */
+.divLibros-secundario {
+  padding: 30px 20px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Encabezado de la biblioteca */
+.biblioteca-header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #629584;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.biblioteca-header:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón de registrar libro */
+.btnRegistrarLibros {
+  background-color: #243642;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnRegistrarLibros:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(45, 106, 142, 0.4);
+}
+
+/* Estilo del buscador */
+.input-buscador {
+  padding: 12px;
+  border: 1px solid #c4d5e0;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.input-buscador:focus {
+  outline: none;
+  border-color: #2d6a8e;
+  box-shadow: 0 4px 10px rgba(45, 106, 142, 0.3);
+}
+
+/* Mensaje cuando no hay libros */
+.no-libros {
+  text-align: center;
+  color: #777;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Contenedor de las tarjetas de libros */
+.libros-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-top: 25px;
+}
+
+/* Tarjeta de libro */
+.libro-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.libro-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono o portada de libro */
+.libro-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d6a8e;
+  color: white;
+  font-size: 2em;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.libro-icon {
+  font-size: 2em;
+}
+
+/* Contenido del libro */
+.libro-content h2 {
+  font-size: 1.3em;
+  color: #2d6a8e;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.libro-content p {
+  color: #555;
+  font-size: 0.95em;
+  margin: 4px 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .biblioteca-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .input-buscador {
+    max-width: 100%;
+  }
+}

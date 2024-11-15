@@ -1,0 +1,68 @@
+.divPadre {
+  display: flex;
+}
+
+.header {
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.featured-books {
+  padding: 20px;
+  text-align: center;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card {
+  width: 200px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.quick-access {
+  padding: 20px;
+  text-align: center;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-link {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.quick-link:hover {
+  background-color: #0056b3;
+}
